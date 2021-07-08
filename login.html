@@ -83,11 +83,21 @@
         </div>
         <form>
             <label for="email">Email:</label>
-            <input type="email" name="email" id="" placeholder="Enter Email">
+            <input type="email" name="email"  placeholder="Enter Email">
+            <div class="error"></div>
             <label for="password">Password:</label>
-            <input type="password" name="password" id="" placeholder="Enter Password">
+            <input type="password" name="password" placeholder="Enter Password">
             <div class="btn"><button>Login</button></div>
         </form>
+        <script>
+            const form = document.querySelector('form');
+            const mymessage = document.querySelector('.error');
+
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                mymessage.textContent = 'hello boys';
+            })
+        </script>
     </div>
 </body>
 
